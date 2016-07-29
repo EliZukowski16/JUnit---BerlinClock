@@ -60,7 +60,21 @@ public class BerlinClock
 
 	public String getTopMinutes(int minutes)
 	{
-		return "12345678901";
+//		return "12345678901";
+		
+		switch(minutes / 15)
+		{
+		case 0:
+			return "OOOOOOOOOOO";
+		case 1:
+			return "OOROOOOOOOO";
+		case 2:
+			return "OOROOROOOOO";
+		case 3:
+			return "OOROOROOROO";
+		default:
+			return "";
+		}
 	}
 
 	public String getBottomMinutes(int minutes)
