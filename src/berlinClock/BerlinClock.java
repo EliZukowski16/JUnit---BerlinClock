@@ -140,7 +140,21 @@ public class BerlinClock
 
 	public String[] convertToBerlinTime(String time)
 	{
-		return new String[5];
+		String[] berlinTime =  new String[5];
+		String[] normalTime =  new String[3];
+		
+		normalTime = time.split(":");
+		Integer hours = Integer.parseInt(normalTime[0]);
+		Integer minutes = Integer.parseInt(normalTime[1]);
+		Integer seconds = Integer.parseInt(normalTime[2]);
+		
+		berlinTime[0] = getSeconds(seconds);
+		berlinTime[1] = getTopHours(hours);
+		berlinTime[2] = getBottomHours(hours);
+		berlinTime[3] = getTopMinutes(minutes);
+		berlinTime[4] = getBottomMinutes(minutes);
+		
+		return berlinTime;
 	}
 	
 
