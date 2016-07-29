@@ -119,8 +119,7 @@ public class BerlinClock
 
 	public String getBottomMinutes(int minutes)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		return "1234";
 	}
 
 	public String[] convertToBerlinTime(String time)
