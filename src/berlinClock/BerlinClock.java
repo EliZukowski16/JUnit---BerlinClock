@@ -65,13 +65,53 @@ public class BerlinClock
 		switch(minutes / 15)
 		{
 		case 0:
-			return "OOOOOOOOOOO";
+			switch(minutes / 5)
+			{
+			case 0:
+				return "OOOOOOOOOOO";
+			case 1:
+				return "YOOOOOOOOOO";
+			case 2:
+				return "YYOOOOOOOOO";	
+			default:
+				return "";
+			}
 		case 1:
-			return "OOROOOOOOOO";
+			switch((minutes - 15) / 5)
+			{
+			case 0:
+				return "YYROOOOOOOO";
+			case 1:
+				return "YYRYOOOOOOO";
+			case 2:
+				return "YYRYYOOOOOO";
+			default:
+				return "";
+			}
 		case 2:
-			return "OOROOROOOOO";
+			switch((minutes - 30) / 5)
+			{
+			case 0:
+				return "YYRYYROOOOO";
+			case 1:
+				return "YYRYYRYOOOO";
+			case 2:
+				return "YYRYYRYYOOO";
+			default:
+				return "";
+			}
 		case 3:
-			return "OOROOROOROO";
+			switch((minutes - 45) / 5)
+			{
+			case 0:
+				return "YYRYYRYYROO";
+			case 1:
+				return "YYRYYRYYRYO";
+			case 2:
+				return "YYRYYRYYRYY";
+			default:
+				return "";
+			}
 		default:
 			return "";
 		}
