@@ -18,7 +18,23 @@ public class BerlinClock
 
 	public String getTopHours(int hours)
 	{
-		return "1234";
+//		return "1234";
+		
+		switch(hours / 5)
+		{
+		case 0:
+			return "OOOO";
+		case 1:
+			return "ROOO";
+		case 2:
+			return "RROO";
+		case 3:
+			return "RRRO";
+		case 4:
+			return "RRRR";
+		default:
+			return "";
+		}
 	}
 
 	public String getBottomHours(int hours)
