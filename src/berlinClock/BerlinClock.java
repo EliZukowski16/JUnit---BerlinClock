@@ -119,7 +119,23 @@ public class BerlinClock
 
 	public String getBottomMinutes(int minutes)
 	{
-		return "1234";
+//		return "1234";
+		
+		switch(minutes % 5)
+		{
+		case 0:
+			return "OOOO";
+		case 1:
+			return "YOOO";
+		case 2:
+			return "YYOO";
+		case 3:
+			return "YYYO";
+		case 4:
+			return "YYYY";
+		default:
+			return "";
+		}
 	}
 
 	public String[] convertToBerlinTime(String time)
