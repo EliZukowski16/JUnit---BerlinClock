@@ -60,8 +60,7 @@ public class BerlinClock
 
 	public String getTopMinutes(int minutes)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		return "12345678901";
 	}
 
 	public String getBottomMinutes(int minutes)
