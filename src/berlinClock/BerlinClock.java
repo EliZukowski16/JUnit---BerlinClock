@@ -5,8 +5,15 @@ public class BerlinClock
 
 	public String getSeconds(int seconds)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		switch(seconds % 2)
+		{
+		case 0:
+			return "Y";
+		case 1:
+			return "O";
+		default:
+			return "";
+		}
 	}
 
 	public String getTopHours(int hours)
